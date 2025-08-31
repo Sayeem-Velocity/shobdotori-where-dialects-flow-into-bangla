@@ -1,7 +1,7 @@
-// ✅ Backend URL for XAMPP (adjust if you host elsewhere)
+//  Backend URL for XAMPP (adjust if you host elsewhere)
 const BACKEND_URL = "http://localhost/shobdosetu";
 
-// ✅ All sentences
+//  All sentences
 const sentences = [
   "তুমি এখন কোথায় যাচ্ছো?","আমি আজকে বাড়ি যাচ্ছি।","এখন কয়টা বাজে বলো?","দুপুর ইতিমধ্যেই হয়ে গেছে।",
   "দরজা তাড়াতাড়ি খুলো।","আলোটা নিভিয়ে দাও।","আমি কিছু খেতে চাই।","ভাত একেবারে হয়ে গেছে।",
@@ -30,7 +30,7 @@ const sentences = [
   "আমি লিচু খেতে চাই।","দুধটা এখন গরম আছে।","চাল আনো ঘরের ভিতর।","ডালটা আমাকে দাও।"
 ];
 
-// ✅ Render sentences on page
+//  Render sentences on page
 const box = document.getElementById("sentences");
 sentences.forEach((s,i)=>{
   const p = document.createElement("p");

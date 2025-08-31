@@ -1,5 +1,5 @@
 //  Backend URL for XAMPP (adjust if you host elsewhere)
-const BACKEND_URL = "http://localhost/shobdosetu";
+const BACKEND_URL = "http://localhost/shobdotori";
 
 //  All sentences
 const sentences = [

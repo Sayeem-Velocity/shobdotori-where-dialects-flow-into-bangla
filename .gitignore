@@ -1,2 +1,19 @@
 # Ignore VSCode local history folders
 **/.history/
+
+# Ignore PHP and HTML files
+*.php
+
+# Ignore audio files
+*.mp3
+*.wav
+
+# Ignore API files
+/api/*
+
+# Ignore specific files
+/index.php
+/.htaccess
+
+# Ignore audio folder for upload
+/audio

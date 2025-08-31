@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>শব্দসেতু : Bridging Dialect Speech to Standard Bangla</title>
+  <title>শব্দতরী : Where Dialects flow into Bangla</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
@@ -14,36 +14,11 @@
 
     <!-- Dropdown -->
     <div class="dropdown">
-    <label for="dialect">উপভাষা নির্বাচন করুন:</label>
-    <select id="dialect">
+      <label for="dialect">উপভাষা নির্বাচন করুন:</label>
+      <select id="dialect">
         <option value="">-- Select --</option>
-
-        <!-- 🟢 First show 8 Divisions -->
-        <optgroup label="Divisions">
-        <option value="dhaka_division">ঢাকা বিভাগ</option>
-        <option value="chattogram_division">চট্টগ্রাম বিভাগ</option>
-        <option value="rajshahi_division">রাজশাহী বিভাগ</option>
-        <option value="khulna_division">খুলনা বিভাগ</option>
-        <option value="barishal_division">বরিশাল বিভাগ</option>
-        <option value="sylhet_division">সিলেট বিভাগ</option>
-        <option value="rangpur_division">রংপুর বিভাগ</option>
-        <option value="mymensingh_division">ময়মনসিংহ বিভাগ</option>
-        </optgroup>
-
-        <!-- 🟢 Then add Major Cities -->
-        <!-- <optgroup label="Major Cities">
         <option value="dhaka">ঢাকা</option>
         <option value="chittagong">চট্টগ্রাম</option>
-        <option value="khulna_city">খুলনা</option>
-        <option value="rajshahi_city">রাজশাহী</option>
-        <option value="sylhet_city">সিলেট</option>
-        <option value="barishal_city">বরিশাল</option>
-        <option value="rangpur_city">রংপুর</option>
-        <option value="mymensingh_city">ময়মনসিংহ</option>
-        </optgroup> -->
-
-        <!-- 🟢 Rest of the Districts -->
-        <optgroup label="Districts">
         <option value="mymensingh">ময়মনসিংহ</option>
         <option value="comilla">কুমিল্লা</option>
         <option value="noakhali">নোয়াখালী</option>
@@ -68,10 +43,8 @@
         <option value="chandpur">চাঁদপুর</option>
         <option value="lakshmipur">লক্ষ্মীপুর</option>
         <option value="sandwip">সন্দ্বীপ</option>
-        </optgroup>
-    </select>
+      </select>
     </div>
-
 
     <!-- Sentences -->
     <div id="sentences" class="sentence-box"></div>
@@ -93,6 +66,13 @@
     <span id="recordingText">রেকর্ড হচ্ছে... একটি মাত্র বাক্য পড়ুন</span>
   </div>
 
+  <!-- Backend URL (set manually for Netlify) -->
+  <script>
+    // ⚠️ Replace this with your actual ngrok/VPS/shared hosting backend URL
+    window.APP_CONFIG = { BACKEND_URL: "https://random-id.ngrok-free.app/shobdosetu" };
+  </script>
+
+  <!-- Frontend Logic -->
   <script src="js/app.js"></script>
 </body>
 </html>

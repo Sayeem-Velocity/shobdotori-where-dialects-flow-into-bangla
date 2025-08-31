@@ -1,3 +1,4 @@
+/* ===== Global ===== */
 body {
   margin: 0;
   font-family: "Noto Sans Bengali", sans-serif;
@@ -8,22 +9,23 @@ body {
   position: relative;
 }
 
-/* blur overlay */
+/* ===== Background overlay with blur ===== */
 .overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  inset: 0;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari / iOS */
   z-index: -1;
 }
 
+/* ===== Container ===== */
 .container {
   max-width: 900px;
   margin: auto;
   padding: 30px;
   text-align: center;
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 1s ease-in;
 }
 
 .title {
@@ -32,6 +34,7 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
+/* ===== Dropdown ===== */
 .dropdown {
   margin-bottom: 20px;
 }
@@ -41,49 +44,53 @@ select {
   border-radius: 8px;
   border: none;
   font-size: 16px;
+  outline: none;
 }
 
+/* ===== Sentences box ===== */
 .sentence-box {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 20px;
   margin-top: 20px;
   text-align: left;
   max-height: 300px;
   overflow-y: auto;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .sentence-box p {
   padding: 8px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  transition: transform 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s, background 0.2s;
 }
 
 .sentence-box p:hover {
-  transform: scale(1.05);
-  background: rgba(255,255,255,0.15);
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.12);
   cursor: pointer;
 }
 
+/* ===== Recorder area ===== */
 .recorder {
   margin-top: 25px;
 }
 
 button {
   background: #007bff;
-  color: white;
+  color: #fff;
   border: none;
   padding: 12px 18px;
   margin: 5px;
   border-radius: 8px;
   font-size: 16px;
-  transition: all 0.3s;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 button:hover {
   background: #0056b3;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 #status {
@@ -91,22 +98,21 @@ button:hover {
   font-style: italic;
 }
 
-/* Floating Recording Box */
+/* ===== Floating recording badge ===== */
 .recording-box {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: rgba(220, 0, 0, 0.9);
-  color: white;
+  color: #fff;
   padding: 12px 18px;
   border-radius: 10px;
-  font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  animation: slideUp 0.4s ease-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.25s ease-out;
 }
 
 .recording-box.hidden {
@@ -121,6 +127,7 @@ button:hover {
   animation: blink 1s infinite;
 }
 
+/* ===== Animations ===== */
 @keyframes blink {
   0% { opacity: 1; }
   50% { opacity: 0.2; }
@@ -128,17 +135,17 @@ button:hover {
 }
 
 @keyframes slideUp {
-  from { transform: translateY(50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes float {
-  0% { transform: translateY(0);}
-  50% { transform: translateY(-10px);}
-  100% { transform: translateY(0);}
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0;}
-  to { opacity: 1;}
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

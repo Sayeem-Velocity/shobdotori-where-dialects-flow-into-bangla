@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>শব্দসেতু : Bridging Dialect Speech to Standard Bangla</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/image.png">
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="container">
+    <h1 class="title">"শব্দতরী : Where Dialects flow into Bangla"</h1>
+
+    <!-- Dropdown -->
+    <div class="dropdown">
+    <label for="dialect">ডায়ালেক্ট বাছাই করুন:</label>
+    <select id="dialect">
+        <option value="">-- Select --</option>
+
+        <!-- 🟢 First show 8 Divisions -->
+        <optgroup label="Divisions">
+        <option value="dhaka_division">ঢাকা বিভাগ</option>
+        <option value="chattogram_division">চট্টগ্রাম বিভাগ</option>
+        <option value="rajshahi_division">রাজশাহী বিভাগ</option>
+        <option value="khulna_division">খুলনা বিভাগ</option>
+        <option value="barishal_division">বরিশাল বিভাগ</option>
+        <option value="sylhet_division">সিলেট বিভাগ</option>
+        <option value="rangpur_division">রংপুর বিভাগ</option>
+        <option value="mymensingh_division">ময়মনসিংহ বিভাগ</option>
+        </optgroup>
+
+        <!-- 🟢 Then add Major Cities -->
+        <!-- <optgroup label="Major Cities">
+        <option value="dhaka">ঢাকা</option>
+        <option value="chittagong">চট্টগ্রাম</option>
+        <option value="khulna_city">খুলনা</option>
+        <option value="rajshahi_city">রাজশাহী</option>
+        <option value="sylhet_city">সিলেট</option>
+        <option value="barishal_city">বরিশাল</option>
+        <option value="rangpur_city">রংপুর</option>
+        <option value="mymensingh_city">ময়মনসিংহ</option>
+        </optgroup> -->
+
+        <!-- 🟢 Rest of the Districts -->
+        <optgroup label="Districts">
+        <option value="mymensingh">ময়মনসিংহ</option>
+        <option value="comilla">কুমিল্লা</option>
+        <option value="noakhali">নোয়াখালী</option>
+        <option value="feni">ফেনী</option>
+        <option value="brahmanbaria">ব্রাহ্মণবাড়িয়া</option>
+        <option value="gaibandha">গাইবান্ধা</option>
+        <option value="kurigram">কুড়িগ্রাম</option>
+        <option value="jessore">যশোর</option>
+        <option value="kushtia">কুষ্টিয়া</option>
+        <option value="jhenaidah">ঝিনাইদহ</option>
+        <option value="bagerhat">বাগেরহাট</option>
+        <option value="khulna">খুলনা</option>
+        <option value="patuakhali">পটুয়াখালী</option>
+        <option value="bhola">ভোলা</option>
+        <option value="panchagarh">পঞ্চগড়</option>
+        <option value="lalmonirhat">লালমনিরহাট</option>
+        <option value="dinajpur">দিনাজপুর</option>
+        <option value="rajshahi">রাজশাহী</option>
+        <option value="natore">নাটোর</option>
+        <option value="pabna">পাবনা</option>
+        <option value="sirajganj">সিরাজগঞ্জ</option>
+        <option value="chandpur">চাঁদপুর</option>
+        <option value="lakshmipur">লক্ষ্মীপুর</option>
+        <option value="sandwip">সন্দ্বীপ</option>
+        </optgroup>
+    </select>
+    </div>
+
+
+    <!-- Sentences -->
+    <div id="sentences" class="sentence-box"></div>
+
+    <!-- Recorder -->
+    <div class="recorder">
+      <p><b>নির্দেশনা:</b> প্রতিটি রেকর্ডে কেবলমাত্র একটি বাক্য পড়ুন।  
+      "রেকর্ড শুরু" চাপুন → একটি বাক্য পড়ুন → তারপর "রেকর্ড শেষ" চাপুন।</p>
+
+      <button id="startBtn">রেকর্ড শুরু</button>
+      <button id="stopBtn" disabled>রেকর্ড শেষ</button>
+      <p id="status">রেকর্ড করার জন্য শুরু চাপুন</p>
+    </div>
+  </div>
+
+  <!-- Floating Recording Box -->
+  <div id="recordingBox" class="recording-box hidden">
+    <div class="dot"></div>
+    <span id="recordingText">রেকর্ড হচ্ছে... একটি মাত্র বাক্য পড়ুন</span>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

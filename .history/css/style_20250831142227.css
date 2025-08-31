@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: "Noto Sans Bengali", sans-serif;
+  background: linear-gradient(135deg, #2b5876, #4e4376);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.dropdown {
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.sentence-box {
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.sentence-box p {
+  padding: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.2s;
+}
+
+.sentence-box p:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.15);
+  cursor: pointer;
+}
+
+.recorder {
+  margin-top: 25px;
+}
+
+button {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+}
+
+#status {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+@keyframes float {
+  0% { transform: translateY(0);}
+  50% { transform: translateY(-10px);}
+  100% { transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}

@@ -17,7 +17,6 @@ SHOBDOTORI/
 │── index.html         # Main frontend (for Netlify or local hosting)
 │── index.php          # Alternative frontend (if served with PHP backend)
 │── .htaccess          # Apache configuration (CORS/routing)
-│── config.php         # Backend config (DB + storage + ffmpeg paths)
 ```
 
 ---

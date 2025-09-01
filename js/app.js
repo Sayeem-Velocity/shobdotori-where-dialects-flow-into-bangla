@@ -38,7 +38,7 @@ sentences.forEach((s,i)=>{
   box.appendChild(p);
 });
 
-// ✅ Recording logic
+// Recording logic
 let mediaRecorder, audioChunks = [];
 let currentIndex = 0;
 

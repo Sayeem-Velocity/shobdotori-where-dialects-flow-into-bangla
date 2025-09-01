@@ -9,4 +9,4 @@
 *.wav
 
 # Ignore audio folder for upload
-/audio
+#/audio

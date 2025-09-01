@@ -1,4 +1,4 @@
-# Shobdotori – Dialect to Bangla Speech Collection
+# "শব্দতরী : Where Dialects flow into Bangla"
 
 Shobdotori is a web-based platform for collecting and storing audio recordings of Bangla dialects.
 It has a **frontend** (user interface) and a **backend** (API + database) that work together.
